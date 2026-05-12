@@ -7,6 +7,11 @@ dependencies = [
     "pyyaml>=6.0.2",
 ]
 
+[tool.uv]
+constraint-dependencies = [
+    "urllib3>=2.7.0",  # CVE-2026-44431, CVE-2026-44432
+]
+
 [dependency-groups]
 dev = [
     "bandit>=1.8.0",
@@ -17,7 +22,7 @@ dev = [
     "pip-audit>=2.6.1",
     "pytest-cov>=6.0.0",
     "deptry>=0.23.0",
-    "pip>=25.1.1",
+    "pip>=26.1",  # CVE-2026-6357
     "ty>=0.0.18",
     "types-pyyaml>=6.0",
 ]
